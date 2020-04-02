@@ -1,0 +1,25 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "mediengestalter dojos",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp default"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.0",
+    "npm": "^5.0"
+  },
+  "devDependencies": {
+    "gulp": "4.0.0",
+    "gulp-clean-css": "4.0.0",
+    "gulp-cssmin": "0.1.7",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.0.2",
+    "gulp-sass-glob": "1.0.9",
+    "gulp-sourcemaps": "2.6.5"
+  },
+  "dependencies": {}
+}

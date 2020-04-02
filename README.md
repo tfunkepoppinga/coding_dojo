@@ -1,5 +1,9 @@
-# coding dojo for beginners
+# Welcome to Dojo
 
-Auch in Zeiten von Corona wollen wir auf Dojos nicht verzichten.
+### Tooltip
+Bei Hover / Touch auf das Icon mit Text soll ein Tooltip erscheinen, in dem weiterer Inhalt angezeigt wird (z.B. Aufzählung von Skills oder Hobbies).
 
-Daher posten wir hier in regelmäßigen Abständen entsprechende **Feature Branches** mit den Aufgaben.
+Ein Dreieck zeigt als Indikator den Ursprung des Tooltips. Die Ausrichtung des Tooltips kann dabei variieren (oben, rechts, links oder unten).
+Hinweis: Die Positionierung muss nicht während der Laufzeit passieren, z.B. aufgrund des verfügbaren Platzes. Die Ausrichtung kann z.B. per Klasse im Markup gesetzt werden.
+
+![Example](./source/images/tooltip.png)
