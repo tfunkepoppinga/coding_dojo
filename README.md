@@ -1,12 +1,5 @@
 # coding dojo for beginners
 
-### create an accordion
-- per default every accordion is collapsed
-- accordion has three tabs
-- every tab close when next tab is opened
+Auch in Zeiten von Corona wollen wir auf Dojos nicht verzichten.
 
-### Example 
-https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example
-
-
-<div>Test</div>
+Daher posten wir hier in regelmäßigen Abständen entsprechende **Feature Branches** mit den Aufgaben.
