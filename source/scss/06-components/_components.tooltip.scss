@@ -1,0 +1,29 @@
+$tooltip--trigger-padding:  6px !default;
+
+$tooltip-trigger-bgc:       #CCCCCC !default;
+$tooltip-trigger-color:     #555555 !default;
+
+$tooltip-content-bgc:       #333333 !default;
+
+
+.c-tooltip {
+  display: inline-block;
+}
+
+.c-tooltip__content {
+  position: absolute;
+  background-color: $tooltip-content-bgc;
+  display: none;
+}
+
+.c-tooltip__trigger {
+  background-color: $tooltip-trigger-bgc;
+  color: $tooltip-trigger-color;
+  padding: $tooltip--trigger-padding;
+
+  &:hover {
+    background-color: darken($tooltip-trigger-bgc, 20%);
+    color: darken($tooltip-trigger-color, 20%);
+  }
+}
+
