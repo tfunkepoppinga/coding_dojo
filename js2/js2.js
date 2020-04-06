@@ -29,6 +29,9 @@ switch (new Date().getDay()) {
 }
 // console.log(text);
 
+
+
+
 // for loop 5x
 for (let i = 0; i < 5; i++) {
     // console.log(i);
@@ -67,5 +70,5 @@ while (pet === 'maulwurf') {
     if (k === 5) {
         pet = 'hund';
     }
-    // console.log('while2', k)
+    console.log('while2', k)
 }
