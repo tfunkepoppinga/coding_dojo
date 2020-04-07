@@ -59,25 +59,81 @@ switch (numberF){
 
 }
 
-//console.log(text)
+// console.log(text)
 
 
 //h) Setze eine Variable auf den Wert 3 und prüfe auf 3 verschieden Werte (1, 2, 3). Es soll jeweils die Zahl ausgesprochen ausgegeben werden ("eins", "zwei", "drei").
 //    Standardmäßig soll "irgendeine Zahl" ausgegeben werden.
 
-const value = 3;
+const value = 8;
 switch (value){
     case 1:
-        text = 'blablabla';
+        text = 'eins';
         break;
     case 2:
-        text = 'blabla';
+        text = 'zwei';
         break;
     case 3:
-        text = 'blah';
+        text = 'drei';
         break;
     default:
-        text = 'bababababababababababababa';
+        text ="irgendeine Zahl";
 }
 
-//console.log(text)
+//console.log(text);
+
+
+// a)  Schreibe eine for-Schleife, die 10x durchläuft.
+//     Beim 5. Durchlauf soll "Möp" ausgegeben werden.
+
+var string = "möp";
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+    if (i == 4) {
+        text += string;
+    } else {
+        text += i;
+    }
+ // console.log(text);
+}
+
+
+// for (let i = 0; i < 10; i++) {
+//     if (i === 4) {
+//         console.log('möp');
+//         i++
+//     }
+//      console.log(i)
+// }
+
+
+
+// b)  Schreibe jeweils eine for/of und forEach Schleife,
+//     die ein Array, welches 3 verschiedene Datentypen beinhaltet, durchläuft.
+
+var variableB = ['string', 1, false];
+var x;
+// variableB.forEach(myFunction);
+
+// function myFunction(item, index) {
+//     console.log(item)
+// }
+
+for (x of variableB) {
+    console.log(x)
+}
+
+// c)  Schreibe eine Schleife, welche "Chicken Curry" so lange ausgibt, wie in der Variable "Chicken Curry" steht.
+//     Nach dem 3. Durchlauf wird die Variable geleert.
+
+
+let food = 'Chicken Curry';
+let k = 0;
+while (food === 'Chicken Curry') {
+    k++;
+    if (k === 3) {
+        food = '';
+    }
+     // console.log('while2', k)
+}
