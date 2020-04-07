@@ -17,6 +17,7 @@ for (let Data of DataTypes) {
     console.log(typeof Data)
 }
 
+
 //c
 let test = 'Chicken Curry';
 let t = 0;
