@@ -9,9 +9,6 @@ $tooltip-bgc:               #000000;
   position: absolute;
   background-color: $tooltip-bgc;
   color: #ffffff;
-}
-
-.c-tooltip__content--top {
 
   &::before {
     content: '';
@@ -23,3 +20,15 @@ $tooltip-bgc:               #000000;
     transform: translateX(-50%);
   }
 }
+
+.c-tooltip__content--top {
+
+  &::before {
+    border-top: 5px $tooltip-bgc solid;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+

@@ -1,7 +1,11 @@
+$grid-padding:  10px;
+$grid-margin:   50px;
+
 .o-grid {
   display: flex;
 }
 
 .o-grid__items {
-  padding: 10px;
+  padding: $grid-padding;
+  margin: $grid-margin;
 }
