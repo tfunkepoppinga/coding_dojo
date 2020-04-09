@@ -1,4 +1,25 @@
+$tooltip-trigger-bgc:       lightgray;
+$tooltip-bgc:               #000000;
+
 .c-tooltip__trigger {
-  background-color: lightgray;
+  background-color: $tooltip-trigger-bgc;
 }
 
+.c-tooltip__content {
+  position: absolute;
+  background-color: $tooltip-bgc;
+  color: #ffffff;
+}
+
+.c-tooltip__content--top {
+
+  &::before {
+    content: '';
+    position: absolute;
+    border: 5px transparent solid;
+    border-top: 5px $tooltip-bgc solid;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
