@@ -1,3 +1,20 @@
+// h)
+let text = 3;
+switch (text) {
+    case 1:
+        text = 'eins';
+        break;
+    case 2:
+        text = 'zwei';
+        break;
+    case 3:
+        text = 'drei';
+        break;
+    default:
+        text = 'Irgendeine Zahl';
+}
+console.log(text);
+
 // a)
 for (let i = 0; i < 10; i++) {
     if (i === 5) {
