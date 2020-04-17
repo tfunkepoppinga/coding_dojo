@@ -1,0 +1,31 @@
+.c-tooltip {
+  &:hover {
+    .c-tooltip__content {
+      display: block;
+    }
+  }
+}
+
+.c-tooltip-trigger {
+  padding: 12px;
+  background-color: grey;
+}
+
+.c-tooltip__content {
+  background-color: black;
+  display: none;
+  position: absolute;
+  color: white;
+
+  &::before {
+    border-top: 5px solid black;
+    border: 5px solid transparent;
+    content: ' ';
+    position: absolute;
+  }
+}
+
+.c-tooltip__content--top {
+  bottom: 100%;
+}
+
