@@ -5,5 +5,5 @@
 - accordion has three tabs
 - every tab close when next tab is opened
 
-### Example 
-https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example
+### Layout 
+![Example](./source/images/accordion.png)
