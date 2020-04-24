@@ -1,23 +1,45 @@
+$tooltip-padding:               10px;
+
+$tooltip-content-color:         black;
+$tooltip-triangle-width:        5px;
+
 .c-tooltip {
-  padding: 10px;
+  padding: $tooltip-padding;
   background-color: lightgray;
   cursor: pointer;
   position: relative;
 
   &:hover {
-
-	.c-tooltip__box {
+	.c-tooltip__content {
 	  display: block;
 	}
   }
 }
 
-.c-tooltip__box {
+.c-tooltip__content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: $tooltip-content-color;
   color: white;
   bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $tooltip-triangle-width;
+    height: $tooltip-triangle-width;
+    border: $tooltip-triangle-width solid transparent;
+    border-top-color: $tooltip-content-color;
+  }
 }
 
 .c-tooltip__box--top {
