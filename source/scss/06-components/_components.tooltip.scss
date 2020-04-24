@@ -1,7 +1,10 @@
 $tooltip-padding:               10px;
-
+$tooltip-content-padding:       $tooltip-padding / 2;
 $tooltip-content-color:         black;
 $tooltip-triangle-width:        5px;
+$tooltip-margin:                20px;
+$tooltip-border-radius:         5px;
+
 
 .c-tooltip {
   padding: $tooltip-padding;
@@ -24,9 +27,9 @@ $tooltip-triangle-width:        5px;
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 20px;
-  padding: 5px;
-  border-radius: 5px;
+  margin-bottom: $tooltip-margin;
+  padding: $tooltip-content-padding;
+  border-radius: $tooltip-border-radius;
 
   &::after {
     content: '';
@@ -35,13 +38,8 @@ $tooltip-triangle-width:        5px;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: $tooltip-triangle-width;
-    height: $tooltip-triangle-width;
     border: $tooltip-triangle-width solid transparent;
     border-top-color: $tooltip-content-color;
   }
 }
 
-.c-tooltip__box--top {
-
-}
