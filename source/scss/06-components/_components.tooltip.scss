@@ -1,0 +1,16 @@
+.c-tooltip {
+  padding: 10px;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.c-tooltip__box {
+  display: none;
+
+
+  &:hover {
+	display: block;
+	position: absolute;
+	background-color: black;
+  }
+}
