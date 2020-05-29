@@ -1,0 +1,27 @@
+$accordion-border:                              1px solid #444444 !default;
+$accordion-padding:                             20px !default;
+
+$accordion-trigger-background-color:            #bbbbbb !default;
+$accordion-trigger-color:                       #6495ED !default;
+.c-accordion {
+	border:$accordion-border;
+	width: 100%;
+}
+
+.c-accordion__trigger {
+	background-color: $accordion-trigger-background-color;
+	cursor: pointer;
+	color: $accordion-trigger-color;
+	width: 100%;
+	padding: $accordion-padding;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+	
+}
+
+.c-accordion__content {
+	width: 100%;
+	padding: $accordion-padding;
+}
