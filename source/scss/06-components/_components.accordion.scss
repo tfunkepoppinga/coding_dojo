@@ -1,29 +1,39 @@
-$accordion-border:                              1px solid #444444 !default;
-$accordion-padding:                             20px !default;
+$accordion-color--primary:          #CCC !default;
+$accordion-border:                  1px solid $accordion-color--primary !default;
+$accordion-width:                   100% !default;
+$accordion-padding:                 20px !default;
 
-$accordion-trigger-background-color:            #bbbbbb !default;
-$accordion-trigger-color:                       #6495ED !default;
+$accordion-content-height:          100% !default;
+
 .c-accordion {
-	border:$accordion-border;
-	width: 100%;
+	border: $accordion-border;
+	width: $accordion-width;
 }
 
-.c-accordion__trigger {
-	background-color: $accordion-trigger-background-color;
-	cursor: pointer;
-	color: $accordion-trigger-color;
-	width: 100%;
+.c-accordion__item {
+	
+	& .is-active {
+		.c-accordion__content {
+			height: $accordion-content-height;
+		}
+	}
+}
+
+.c-accordion__header {
+	background-color: $accordion-color--primary;
 	padding: $accordion-padding;
-	border:$accordion-border;
+	text-transform: capitalize;
 	
 	&:hover {
+		background-color: lighten($accordion-color--primary, 10%);
 		text-decoration: underline;
+		cursor: pointer;
 	}
-	
 }
 
 .c-accordion__content {
-	width: 100%;
-	padding: $accordion-padding;
-	display: none;
+	height: 0;
+	padding: 0 $accordion-padding;
+	overflow: hidden;
+	transition: all 0.3s ease;
 }
