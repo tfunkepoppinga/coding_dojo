@@ -12,7 +12,7 @@ $accordion-content-height:          100% !default;
 
 .c-accordion__item {
 	
-	& .is-active {
+	&.is-active {
 		.c-accordion__content {
 			height: $accordion-content-height;
 		}
