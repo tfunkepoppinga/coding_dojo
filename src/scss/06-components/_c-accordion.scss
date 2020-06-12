@@ -1,3 +1,10 @@
-.c-accordion {
+$accordion__header-background-color:            #cccccc;
+$accordion-border:                              1px solid $accordion__header-background-color;
 
+.c-accordion {
+	border: $accordion-border;
+}
+
+.c-accordion__header {
+	background-color: $accordion__header-background-color;
 }

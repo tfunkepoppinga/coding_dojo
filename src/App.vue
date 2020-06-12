@@ -14,3 +14,6 @@
     }
   }
 </script>
+<style lang="scss">
+	@import 'scss/03-generic/generic.normalize.scss';
+</style>
