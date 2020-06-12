@@ -1,9 +1,24 @@
-# coding dojo for beginners
+# coding-dojo
 
-### create an accordion
-- per default every accordion is collapsed
-- accordion has three tabs
-- every tab close when next tab is opened
+## Project setup
+```
+npm install
+```
 
-### Layout 
-![Example](./source/images/accordion.png)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
