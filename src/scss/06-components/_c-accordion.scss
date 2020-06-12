@@ -5,6 +5,19 @@ $accordion-border:                              1px solid $accordion__header-bac
 	border: $accordion-border;
 }
 
+.c-accordion__item {
+
+	&.is-open {
+		.c-accordion__content {
+			display: block;
+		}
+	}
+}
+
 .c-accordion__header {
 	background-color: $accordion__header-background-color;
+}
+
+.c-accordion__content {
+	display: none;
 }
