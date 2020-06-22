@@ -1,6 +1,6 @@
 <template>
-	<div>
-
+	<div class="c-accordion">
+		<accordion-item v-for="(item, index) in AccordionItems" :key="index" :headline="item.headline" :content="item.content"></accordion-item>
 	</div>
 </template>
 
@@ -12,9 +12,25 @@
     components: {
       AccordionItem
     },
-    props: {},
+    props: {
+    },
     data() {
-      return {}
+      return {
+        AccordionItems: [
+          {
+            headline: "Hallo",
+            content: "Test",
+          },
+          {
+            headline: "Zwei",
+            content: "TestZwei",
+          },
+          {
+            headline: "Drei",
+            content: "TestDrei",
+          }
+          ]
+      }
     },
     mounted() {}
   }
