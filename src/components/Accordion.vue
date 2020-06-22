@@ -1,6 +1,6 @@
 <template>
-	<div class="c-accordion">
-		<accordion-item  v-for="(item, i) in accordionItems" :key="i" :accordion-title="item.title" :accordion-content="item.content"></accordion-item>
+	<div>
+
 	</div>
 </template>
 
@@ -14,26 +14,9 @@
     },
     props: {},
     data() {
-      return {
-        accordionContent: 'lorem Ipsum blah blah.',
-        accordionItems: [
-          {
-            title: 'Accordion uno',
-            content: 'lorem Ipsum blah blah.lorem Ipsum blah blah.lorem Ipsum blah blah.lorem Ipsum blah blah.'
-          },
-          {
-            title: 'Accordion dos',
-            content: 'lorem Ipsum blah blah.lorem Ipsum blah blah.lorem Ipsum blah blah.lorem Ipsum blah blah.'
-          },
-          {
-            title: 'Accordion tres',
-            content: 'lorem Ipsum blah blah.lorem Ipsum blah blah.lorem Ipsum blah blah.lorem Ipsum blah blah.'
-          }
-        ]
-      }
+      return {}
     },
-    mounted() {
-    }
+    mounted() {}
   }
 </script>
 <style lang="scss">

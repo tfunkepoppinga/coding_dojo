@@ -1,36 +1,17 @@
 <template>
-    <div class="c-accordion__item" :class="{ 'is-open': isOpen }">
-        <div @click="toggleAccordion" class="c-accordion__header">
-            <h2>{{ accordionTitle }}</h2>
-        </div>
-        <div class="c-accordion__content">{{ accordionContent }}</div>
+    <div>
+
     </div>
 </template>
 
 <script>
     export default {
         name: 'Accordion',
-        props: {
-            accordionTitle: String,
-            accordionContent: {
-                type: String,
-                default: 'Default'
-            }
-        },
+        props: {},
         data() {
-            return {
-                isOpen: false
-            }
+            return {}
         },
-        mounted() {
-        },
-        methods: {
-            toggleAccordion() {
-                this.isOpen = !this.isOpen
-            }
-        }
+        mounted() {},
+        methods: {}
     }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-
