@@ -1,6 +1,14 @@
 <template>
 	<div class="c-accordion">
-		<accordion-item v-for="(item, index) in AccordionItems" :key="index" :headline="item.headline" :content="item.content"></accordion-item>
+		<accordion-item
+				:index="index"
+				v-for="(item, index) in AccordionItems"
+				:key="index"
+				:headline="item.headline"
+				:content="item.content"
+				@close="activeItemIndex = null"
+				@open="activeItemIndex = $event"
+				:is-open="index === activeItemIndex"></accordion-item>
 	</div>
 </template>
 
@@ -16,6 +24,7 @@
     },
     data() {
       return {
+        activeItemIndex: null,
         AccordionItems: [
           {
             headline: "Hallo",
@@ -29,7 +38,7 @@
             headline: "Drei",
             content: "TestDrei",
           }
-          ]
+        ]
       }
     },
     mounted() {}
