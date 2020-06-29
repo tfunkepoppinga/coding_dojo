@@ -1,12 +1,16 @@
-# coding dojo accordion
+## Tasks
+### Input
+- Input Feld erstellen
+- Eingabe im Input (Zahl) soll die Anzahl der Cards anpassen
 
-### create an accordion
-- per default every accordion is collapsed
-- accordion has three tabs
-- every tab close when next tab is opened
+### Button
+- Button erstellen, welcher die Cards togglet
+- Button erstellen, der eine neue Card hinzufügt
+- Button erstellen, der eine Card entfernt
 
-### Layout 
-![Example](./src/assets/accordion.png)
+### Card erweitern
+- Erweitere die Card so, dass man custom html übergeben kann
+- Bild so anpassen, dass es ein "minimalistischer" Slider ist (auf Bild klicken = nächstes Bild)
 
 ## Project setup
 ```

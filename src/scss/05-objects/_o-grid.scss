@@ -1,0 +1,34 @@
+$o-grid__spacing: 20px;
+
+* {
+    box-sizing: border-box;
+}
+
+
+.o-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$o-grid__spacing;
+}
+
+.o-grid__item {
+    width: percentage(1/4);
+    padding-left: $o-grid__spacing;
+    margin-bottom: $o-grid__spacing;
+
+    @include mq($until: tablet) {
+        width: percentage(2/4);
+    }
+    @include mq($until: mobile) {
+        width: percentage(4/4);
+
+    }
+}
+
+.o-grid__item--large {
+    width: percentage(2/4);
+
+    @include mq($until: tablet) {
+        width: percentage(4/4);
+    }
+}

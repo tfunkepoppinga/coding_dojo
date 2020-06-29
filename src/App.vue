@@ -1,19 +1,29 @@
 <template>
-	<div id="app">
-		<accordion/>
+	<div class="o-grid">
+		<div class="o-grid__item">
+			<card></card>
+		</div>
+		<div class="o-grid__item">
+			<card></card>
+		</div>
 	</div>
 </template>
 
 <script>
-  import Accordion from './components/Accordion.vue'
+  import Card from './components/Card.vue'
 
   export default {
     name: 'App',
     components: {
-      Accordion
+      Card
+    },
+    props: {},
+    data() {
+      return {}
     }
   }
 </script>
+
 <style lang="scss">
-	@import 'scss/03-generic/generic.normalize.scss';
+	@import './scss/main';
 </style>
