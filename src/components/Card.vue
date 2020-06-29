@@ -4,11 +4,10 @@
             <img src="../assets/users-2.png" alt="">
         </div>
         <div class="c-card__content">
-            <h1>{{headline}}</h1>
-            <slot name="content"><span>Test</span></slot>
+            <h1>A card</h1>
         </div>
         <div class="c-card__footer">
-            <span>{{footerText}}</span>
+            <span>Footer text</span>
         </div>
     </div>
 </template>
@@ -16,17 +15,11 @@
 <script>
     export default {
         name: 'Card',
-        props: {
-            headline: String,
-            footerText: String,
-        },
+        props: {},
         data() {
-            return {
-            }
+            return {}
         },
         mounted() {
-        },
-        methods: {
         }
     }
 </script>
