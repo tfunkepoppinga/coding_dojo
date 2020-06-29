@@ -1,12 +1,17 @@
 <template>
 	<div>
-		<button @click="addCard" class="c-btn">+</button>
+		<button @click="cardAmount++" class="c-btn">+</button>
 		<button @click="removeCard" class="c-btn">-</button>
-		<div class="o-grid" v-if="cards">
-			<div class="o-grid__item" v-for="(card, index) in cards" :key="index">
-				<card :headline="card.headline" :footer-text="card.footerText"></card>
+		<input v-model="cardAmount" type="number"/>
+		<template>{{ cardAmount }}</template>
+		<div class="o-grid" v-if="cards" v-show="cardVisibility">
+			<div class="o-grid__item" v-for="index in parseInt(cardAmount)" :key="index">
+				<card :headline="`headline ${index}`" :footer-text="'headline ' + index">
+					<template v-slot:content><b>Test2</b></template>
+				</card>
 			</div>
 		</div>
+		<button @click="cardVisibility = !cardVisibility">Toggle Cards</button>
 	</div>
 </template>
 
@@ -21,28 +26,13 @@
     props: {},
     data() {
       return {
-        cards: [
-          {
-            headline:"Card EINS",
-            footerText:"Test",
-          },
-          {
-            headline:"Zwei",
-            footerText:"TestZwei",
-          }
-        ]
+        cardAmount: 2,
+        cardVisibility: true,
       }
     },
     methods: {
-      addCard() {
-        const card = {
-          headline: "Card nr." + ( this.cards.length + 1),
-          footerText: "Footer Text"
-        }
-        this.cards.push(card)
-      },
       removeCard() {
-        this.cards.pop()
+        this.cardAmount--
       }
     }
   }

@@ -5,6 +5,7 @@
         </div>
         <div class="c-card__content">
             <h1>{{headline}}</h1>
+            <slot name="content"><span>Test</span></slot>
         </div>
         <div class="c-card__footer">
             <span>{{footerText}}</span>
@@ -24,6 +25,8 @@
             }
         },
         mounted() {
+        },
+        methods: {
         }
     }
 </script>
