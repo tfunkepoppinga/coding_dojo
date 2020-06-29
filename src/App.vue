@@ -1,7 +1,11 @@
 <template>
-	<div class="o-grid" v-if="cards">
-		<div class="o-grid__item" v-for="(card, index) in cards" :key="index">
-			<card :headline="card.headline" :footer-text="card.footerText"></card>
+	<div>
+		<button @click="addCard" class="c-btn">+</button>
+		<button @click="removeCard" class="c-btn">-</button>
+		<div class="o-grid" v-if="cards">
+			<div class="o-grid__item" v-for="(card, index) in cards" :key="index">
+				<card :headline="card.headline" :footer-text="card.footerText"></card>
+			</div>
 		</div>
 	</div>
 </template>
@@ -19,7 +23,7 @@
       return {
         cards: [
           {
-            headline:"Hallo",
+            headline:"Card EINS",
             footerText:"Test",
           },
           {
@@ -27,6 +31,18 @@
             footerText:"TestZwei",
           }
         ]
+      }
+    },
+    methods: {
+      addCard() {
+        const card = {
+          headline: "Card nr." + ( this.cards.length + 1),
+          footerText: "Footer Text"
+        }
+        this.cards.push(card)
+      },
+      removeCard() {
+        this.cards.pop()
       }
     }
   }
