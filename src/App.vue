@@ -1,10 +1,7 @@
 <template>
-	<div class="o-grid">
-		<div class="o-grid__item">
-			<card></card>
-		</div>
-		<div class="o-grid__item">
-			<card></card>
+	<div class="o-grid" v-if="cards">
+		<div class="o-grid__item" v-for="(card, index) in cards" :key="index">
+			<card :headline="card.headline" :footer-text="card.footerText"></card>
 		</div>
 	</div>
 </template>
@@ -19,7 +16,18 @@
     },
     props: {},
     data() {
-      return {}
+      return {
+        cards: [
+          {
+            headline:"Hallo",
+            footerText:"Test",
+          },
+          {
+            headline:"Zwei",
+            footerText:"TestZwei",
+          }
+        ]
+      }
     }
   }
 </script>
