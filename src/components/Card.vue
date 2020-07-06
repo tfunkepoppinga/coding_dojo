@@ -1,13 +1,13 @@
 <template>
     <div class="c-card">
         <div class="c-card__image c-card__image--large">
-            <img src="../assets/users-2.png" alt="">
+            <img :src="imageSrc" alt="">
         </div>
         <div class="c-card__content">
-            <h1>A card</h1>
+            <h1>{{headline}}</h1>
         </div>
         <div class="c-card__footer">
-            <span>Footer text</span>
+            <span>{{text}}</span>
         </div>
     </div>
 </template>
@@ -15,7 +15,17 @@
 <script>
     export default {
         name: 'Card',
-        props: {},
+        props: {
+            headline: {
+                type: String,
+                default: 'Default'
+            },
+            text: String,
+            imageSrc: {
+                type: String,
+                default: "./static/assets/users-2.png"
+            }
+        },
         data() {
             return {}
         },
