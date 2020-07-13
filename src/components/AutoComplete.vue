@@ -1,9 +1,8 @@
 <template>
     <div class="c-autocomplete">
-        <input />
-        <ul class="c-autocomplete__list">
-            <li>test</li>
-            <li>test2</li>
+        <input @input="onInput" v-model="searchValue"/>
+        <ul v-show="searchValue" class="c-autocomplete__list">
+            <li v-for="(item, index) in resultItems" :key="index">{{ item }}</li>
         </ul>
     </div>
 </template>
@@ -12,12 +11,24 @@
     export default {
         name: 'AutoComplete',
         props: {
-
+            items: Array,
+            minLength: Number,
         },
         data() {
-            return {}
+            return {
+
+                resultItems: [],
+                searchValue: '',
+            }
         },
         mounted() {
+        },
+        methods: {
+            onInput() {
+                if(this.searchValue.length > this.minLength) {
+                    this.resultItems = this.items.filter(item => item.indexOf(this.searchValue) > -1);
+                }
+            }
         }
     }
 </script>

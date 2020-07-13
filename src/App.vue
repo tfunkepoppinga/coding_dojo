@@ -1,9 +1,10 @@
 <template>
-	<auto-complete />
+	<auto-complete :items="items" :min-length="minLength"/>
 </template>
 
 <script>
   import AutoComplete from './components/AutoComplete.vue'
+  const items = require('./data.json')
 
   export default {
     name: 'App',
@@ -13,7 +14,8 @@
     props: {},
     data() {
       return {
-
+		items: items,
+        minLength: 2,
       }
     }
   }
