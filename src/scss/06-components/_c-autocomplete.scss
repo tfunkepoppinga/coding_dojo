@@ -1,0 +1,15 @@
+$autocomplete-bg:       #fff !default;
+$autocomplete-border:   1px solid #eee !default;
+
+.c-autocomplete {
+	position: relative;
+	display: inline-block;
+}
+
+.c-autocomplete__list {
+	display: none;
+	position: absolute;
+	background-color: $autocomplete-bg;
+	width: 100%;
+	border: $autocomplete-border;
+}
