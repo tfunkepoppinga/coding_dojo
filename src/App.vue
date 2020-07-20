@@ -1,14 +1,14 @@
 <template>
-	<auto-complete />
+	<tool-tip />
 </template>
 
 <script>
-  import AutoComplete from './components/AutoComplete.vue'
+  import ToolTip from './components/ToolTip.vue'
 
   export default {
     name: 'App',
     components: {
-      AutoComplete
+      ToolTip
     },
     props: {},
     data() {
