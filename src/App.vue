@@ -1,43 +1,33 @@
 <template>
-	<div class="o-grid">
-		<div class="o-grid__item" :key="index" v-for="(card, index) in cards">
-			<card :headline="card.headline" :text="card.text" :image-src="card.imageSrc"></card>
-		</div>
-	</div>
+    <div>
+        <search-input @change="cards.push($event)"></search-input>
+        <div class="o-grid">
+            <div v-for="( card, index ) in cards" :key="index" class="o-grid__item">
+                <card :title="card.title" :content="card.content"></card>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-  import Card from './components/Card.vue'
+import Card from './components/Card.vue'
+import Input from './components/Input'
 
-  export default {
+export default {
     name: 'App',
     components: {
-      Card
+        Card,
+        SearchInput: Input
     },
     props: {},
     data() {
-      return {
-        cards: [
-          {
-            headline: "Headline 1",
-            text: "Lorem Ipsum",
-            imageSrc: "./static/assets/flex-1.jpg"
-          },
-          {
-            headline: "Headline 2",
-            text: "Lorem Ipsum dolor"
-          },
-          {
-            headline: "Headline 3",
-            text: "Lorem Ipsum dolor sit",
-            imageSrc: "./static/assets/flex-5.jpg"
-          }
-        ]
-      }
+        return {
+            cards: []
+        }
     }
-  }
+}
 </script>
 
 <style lang="scss">
-	@import './scss/main';
+@import './scss/main';
 </style>
