@@ -16,13 +16,9 @@ export default {
   },
   methods: {
     async getWikiAPI() {
-      fetch(`https://de.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&origin=*&titles=${this.search}`)
+      fetch(this.getApi)
       .then(result => result.json())
       .then(json => this.emitFunction(json))
-      // this.$emit('wikiAPI',this.json)
-      // const result = await wikiAPI;
-
-      // console.log(result);
     },
     emitFunction(json) {
       return this.$emit('wikiAPI',json)
@@ -30,7 +26,9 @@ export default {
 
   },
   computed: {
-
+      getApi() {
+        return `https://de.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&origin=*&titles=${this.search}`
+      }
   }
 }
 </script>

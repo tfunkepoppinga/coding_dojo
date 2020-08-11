@@ -3,10 +3,12 @@
         <inputVue @wikiAPI="wikiResults($event)"></inputVue>
         <div class="o-grid">
             <div v-for="(card, i) in cards" :key="i" class="o-grid__item">
-                <card :headline="card.title" :text-content="card.content"></card>
+                <card :class="{'is-active': selectedCard === card.title }" :headline="card.title" :text-content="card.content"></card>
             </div>
         </div>
-
+      <select v-model="selectedCard" v-if="cards.length">
+        <option v-for="(card, index) in cards" :key="index">{{ card.title }}</option>
+      </select>
 	</div>
 </template>
 
@@ -24,6 +26,7 @@
     data() {
       return {
         cards : [],
+        selectedCard: '',
       }
     },
     methods: {

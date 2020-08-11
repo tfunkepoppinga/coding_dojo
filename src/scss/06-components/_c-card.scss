@@ -6,6 +6,10 @@
 	font-family: Arial;
 	height: 100%;
 	width:100%;
+	
+	&.is-active {
+		background-color: lightblue;
+	}
 }
 
 .c-card__image {
