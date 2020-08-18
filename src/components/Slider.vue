@@ -1,5 +1,13 @@
 <template>
-
+    <div class="c-slider">
+        <slot name="left"></slot>
+        <div class="c-slider__background">
+            <div class="c-slider__amount">
+                <div class="c-slider__knob"></div>
+            </div>
+        </div>
+        <slot name="right"></slot>
+    </div>
 </template>
 
 <script>
