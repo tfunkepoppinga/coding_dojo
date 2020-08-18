@@ -1,8 +1,15 @@
-$slider-background:                 #000000;
+$slider-background:                 #8e0dde;
 $slider-background--light:          lighten($slider-background, 50%);
-
+$slider-border-radius:              5px !default;
 .c-slider {
     padding: 24px;
+    display: flex;
+    align-items: center;
+
+    img {
+        object-fit: contain;
+        object-position: center;
+    }
 }
 
 .c-slider__background {
@@ -10,6 +17,10 @@ $slider-background--light:          lighten($slider-background, 50%);
     background-color: $slider-background--light;
     width: 100px;
     height: 7px;
+    border-radius: $slider-border-radius;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
 .c-slider__amount {
@@ -18,11 +29,12 @@ $slider-background--light:          lighten($slider-background, 50%);
     left: 0;
     height: 100%;
     background-color: $slider-background;
+    border-radius: $slider-border-radius;
 }
 
 .c-slider__knob {
     position: absolute;
-    left: 100%;
+    left: calc(100% - (15px / 2));
     top: 50%;
     transform: translateY(-50%);
     width: 15px;
