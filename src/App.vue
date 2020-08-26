@@ -1,12 +1,26 @@
 <template>
     <div>
-        <multiselect :options="options" v-model="value"  label="title" track-by="id" placeholder="Bitte auswählen.." :taggable="true" :customLabel="firstWord">
-<!--            <template slot="option" slot-scope="{ option }"><strong class="test">{{ option.title }}</strong></template>-->
+        <multiselect
+            :options="options"
+            v-model="values"
+            @input="setInCookie"
+            label="title"
+            track-by="id"
+            placeholder="Bitte auswählen.."
+            :multiple="true"
+            :customLabel="firstWord">
         </multiselect>
+        <table class="c-table">
+            <tr class="c-table__row" v-for="value in values" :key="value.id">
+                <td>{{ value.title }}</td>
+            </tr>
+        </table>
     </div>
 </template>
 
 <script>
+
+import * as Cookies from 'js-cookie'
 
 export default {
     name: 'App',
@@ -15,7 +29,7 @@ export default {
     props: {},
     data() {
         return {
-            value: null,
+            values: null,
             options: [{
             }],
 
@@ -34,6 +48,9 @@ export default {
                 const cutHere = title.indexOf(' ');
                 return title.substring(cutFrom, cutHere);
             }
+        },
+        setInCookie() {
+            Cookies.set('multiselectValue', this.values);
         }
     },
     computed: {
@@ -41,6 +58,7 @@ export default {
     },
     mounted() {
         this.getInfoFromApi();
+        this.values = Cookies.getJSON('multiselectValue');
     }
 }
 </script>
@@ -49,4 +67,5 @@ export default {
 
 <style lang="scss">
 @import './scss/main';
+@import "./scss/06-components/components.table";
 </style>
