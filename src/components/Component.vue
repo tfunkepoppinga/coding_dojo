@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'Slider',
+    name: 'Component',
     props: {
 
     },
@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../scss/06-components/_c-slider.scss';
+//@import '../scss/06-components/.scss';
 </style>
